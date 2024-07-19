@@ -11,7 +11,7 @@
 \usepackage{amsmath}
 \DeclareMathOperator{\Tr}{Tr}
 
-\title{Basic overview of the L-unification}
+\title{Initial overview of the L-unification}
 \author{Artem Ovchinnikov}
 \date{\today}
 
@@ -21,34 +21,70 @@
 
 \tableofcontents
 
+\newpage
+\section{Disadvantages of the standard model}
+Non-sufficient self-consistency of the underlying version of quantum field theory. \\
+Incapability of describing the gravitational sector at quantum level. \\
+The standard model is too complicated to be the dreamlike distinguished fundamental theory. \\
 
-\section{Motivation}
-One problem is non-sufficient self-consistency of the underlying version of quantum field theory, which describes the Yang-Mills sector as a low-energy renormalizable limit of some more fundamental theory and is totally uncapable of describing the gravitational sector at quantum level. \\
-Another problem is partly aestetical: the standard model is too complicated to be the dreamlike distinguished fundamental theory, it seems to have too many different fields, too many unrelated coupling constants, too obscure symmetry breaking pattern. \\
+\section{Two basic ways to create a new theory}
+One can think that the particles of the standard model are not really elementary, but are made from a smaller number of simpler components – this leads to development of composite, e.g. technicolor models. \\
+One can think that the particles of the standard model are only fragments of some bigger, more symmetric and universal entities – this is the idea behind unification models. \\
 
-\section{Possible solution}
-There are at least two obvious ways to try to improve the situation: one can think that the particles of the standard model are not really elementary, but are made from a smaller number of simpler components – this leads to development of composite, e.g. technicolor models,– and one can think that the particles of the standard model are only fragments of some bigger, more symmetric and universal entities – this is the idea behind unification models
+\section{Unification models}
+The basic idea of all unification models is to enhance the symmetry, embedding the non-simple gauge group $ G_{st} = SU (3) \times SU (2) \times U (1) $ of the standard model into a larger simple group $G$, which inevitably has larger dimension and thus introduces extra particles.
 
 \section{Main idea}
 The central idea of Lisi’s approach is to consider a minimal modification – ideally just a reformulation – of the standard model, with as few additional fields as only possible. \\
 No extra essences are introduced, like superpartners, extra dimensions, branes, strings etc. \\
-The basic idea of all unification models is to enhance the symmetry, embedding the non-simple gauge group $ G_{st} = SU (3) \times SU (2) \times U (1) $ of the standard model into a larger simple group $G$, which inevitably has larger dimension and thus introduces extra particles.
-Since the number of fields in the standard model is of the order of 200, the number of different generators of ”unification algebra” should exceed this number. If Lie algebra is classical, like SU (N), SO(N ) or Sp(N ), this requires it to have a large rank = sqrt(200) > 14. If instead the group is exceptional, then the smallest group with dimension $>$ 200 is actually the largest: E8 with dim(E8) = 248 and its rank is as low as rank(E8) = 8 (dimension of the next smaller exceptional group dim(E7) = 133 $<$ 200).
+Since the number of fields in the standard model is of the order of 200, the number of different generators of ”unification algebra” should exceed this number. If Lie algebra is classical, like $SU (N)$, $SO(N)$ or $Sp(N)$, this requires it to have a large rank $= \sqrt {200} > 14$. If instead the group is exceptional, then the smallest group with dimension $> 200$ is actually the largest: $E_8$ with $dim(E_8) = 248$ and its rank is as low as $rank(E_8) = 8$ (dimension of the next smaller exceptional group $dim(E7) = 133 < 200$).
 
+\newpage
 \section{L and G - unification}
 Furthermore, while in G-unification models, in order to minimize the number of 3 additional gauge bosons, one attempts to find a group of the lowest dimension with a given rank, in L-unification for the same purpose one tries to minimize the rank for a given dimension, which is now defined by the number of standard-model particles, predominantly fermions. \\
 
 \section{The number of known elementary particles}
-Standard model the numbers $n_F = 96$ and $N_F = 192$. \\
-This gives at least $n_B = n_S + n_V + n_G = 4 + 24 + 2 = 30$ degrees of freedom and about $N_B = N_S + N_V + N_G = 4 + 48 + 40 = 92$ fields in bosonic sector of the standard model. \\
+Standard model fermions numbers $n_F = 96$ (degrees of freedom) and $N_F = 192$ (fields). \\
+Standard model bosons numbers $n_B = 30$ and $N_B = 92$. \\
+
+\section{Without extra particles and fields?}
 Extra particles, are, however, necessary in any case: because of the rank mismatch: there is simply no Lie group which could both match the strict lower limit $ dim(G) \geq n_B + n_F > n_F = 90$ and saturate the rank condition $rank(G) = rank(U (1)) + rank(SU (2)) + rank(SU (3)) + rank(SO(3, 1)) = 1 + 1 + 2 + 2 = 6$.
 
 \section{The main claim}
+The action of the standard model coupled to Einstein gravity,
+\begin{multline}
+    \int \sqrt{\text{det}\, g} \, d^4x \{ M_{\text{Pl}}^2 R(g) - \Lambda + \frac{1}{4g_3^2} \text{Tr}_{SU(3)} G_{\mu\nu} G^{\mu\nu} + \frac{1}{4g_2^2} \text{Tr}_{SU(2)} W_{\mu\nu} W^{\mu\nu} + \frac{1}{4g_1^2} V_{\mu\nu} V^{\mu\nu} + \\ + \sum_{p=1}^{n_g=3} \left( \bar{l}^{(p)}_L \hat{D} l^{(p)}_L + \bar{l}^{(p)}_R \hat{D} l^{(p)}_R + \bar{q}^{(p)}_L \hat{D} q^{(p)}_L + \bar{q}^{(p)}_R \hat{D} q^{(p)}_R \right) + \frac{1}{2} D_\mu \phi^+ D^\mu \phi + V(\phi) + 
+    \\ + \sum_{P,Q=1}^{2n_g=6} \left( M^{(PQ)}_l \bar{l}^{(P)}_R \phi l^{(Q)}_L + M^{(PQ)}_q \bar{q}^{(P)}_R \phi q^{(Q)}_L + \text{c.c.} \right) \}
+\end{multline}
+can be rewritten in a compact form as
+\begin{equation}
+    \int \text{Tr}_{E_8} B \wedge F + \int Q(B)
+\end{equation}
+where
+\begin{equation}
+    F = dA + A \wedge A
+\end{equation}
+is a curvature of the "generalized-connection" field $A(x)$, which is a linear combination of the standard-model fields, distributed over elements of the $E_8$-algebra matrix (adjoint representation of $E_8$), and $Q(B)$ is a quadratic function of the auxiliary field $B$, which is also an adjoint $E_8$ matrix.
+
+In a little more detail:
+\begin{equation}
+    A = \sum_{\alpha \in G}^{56} A^\alpha(x) T_\alpha \oplus \sum_{a \in E/G}^{192} \psi^a(x) T_a,
+\end{equation}
+\begin{equation}
+    B = \sum_{\alpha \in G}^{56} B^\alpha(x) T_\alpha \oplus \sum_{a \in E/G}^{192} \chi^a(x) T_a
+\end{equation}
+and
+\begin{equation}
+    Q(B) = \sum_{\alpha, \alpha' \in G}^{56} \left( Q_{\text{grav}}^{\alpha, \alpha'} B^\alpha \wedge B^{\alpha'} + Q_{\text{YM}}^{\alpha, \alpha'} B^\alpha \wedge *B^{\alpha'} \right)
+\end{equation}
+
+Here the sums are over 248 generators of $E_8$, which are divided into two different groups of 56 and 192, labeled by Greek and small Latin letters respectively, which correspond to decomposition of adjoint (the minimal possible) representation of $E_8$ into a subalgebra $G = SO(7,1) \times SO(8)$ and its representation $R = E/G$. Following, $k$ underlines label $k$-forms. Bosonic 1-forms $A^\alpha = A^\alpha_\mu dx^\mu$ include the gauge fields of the standard model, the gravitational spin-connection and a mixture of Higgs scalars and gravitational tetrades. One of the two tetrade indices is included into the set of $E_8$-indices $\{\alpha\}$, the remaining vector index, as well as the one of the gauge vectors is the 1-form index of $A$. Fermionic (Grassmann-valued) 0-forms $\psi^a$ and $\chi^a$ are made from the fermions of the standard model, with spinor indices included into the set of $\{a\}$. Auxiliary fields $B^\alpha = B^\alpha_{\mu\nu} dx^\mu \wedge dx^\nu$ and $\chi^a = \chi^a_{\mu\nu\lambda} dx^\mu \wedge dx^\nu \wedge dx^\lambda$ are bosonic 2-forms and fermionic 3-forms respectively. No 4-form component is included into $B$, therefore the $\psi^2$ term in $F = F^\alpha T_\alpha + (D\psi)^a T_a + \psi^a \psi^b [T_a, T_b]$ does not contribute to the action.
+
 The action of the standard model coupled to Einstein gravity \\
 \begin{equation}
     \int \Tr_{E_8} B \land F + \int Q(B)
 \end{equation}
-The main disadvantage is, however, more serious: the claim of [1] is not fully justified and, most probably, is simply wrong. Desired distribution of all the fields of the standard model among the generators of E8 is not actually found. One can even argue that it can not be found, at least without some additional modifications of the claim [16]. Still, the attempt deserves attention and it is too close to being true to be simply ignored: some new piece of reality seems to be captured in this way. \\
+The main disadvantage is, however, more serious:  not fully justified and, most probably, is simply wrong. Desired distribution of all the fields of the standard model among the generators of E8 is not actually found. One can even argue that it can not be found, at least without some additional modifications of the claim [16]. Still, the attempt deserves attention and it is too close to being true to be simply ignored: some new piece of reality seems to be captured in this way. \\
 
 \section{Main drawbacks}
 Only unification (symmetry) issues are addressed: other serious problems – of hierarchy and of quantum
@@ -92,4 +128,10 @@ It is easy to deduce that $F = -T$ and therefore previous equation is actually e
 \end{equation}
 where $R_{128}$ is spinor representation of $SO(16)$.
 
+\section{Decomposition of connection $A$}
+\begin{equation}
+    E_8 = D_8 + R_{128} = D_4 + D_4 + (8 \times 8 + R_{128})
+\end{equation}
+Gauge fields are distributed among the two $D_4$ factors, with gravity and two weak groups (left and right) belonging to one of them and with strong and two abelian groups belonging to another. \\
+Fermionic fields are distributed among the spinor representation $R_128$ of maximal subgroup $SO(16) \subset E8$ and the $8 \times 8$ generators of the factor $D_8/D_4 \times D_4$. The three 64-plet constituents of the fermionic sector are related by discrete triality symmetry. \\
 \end{document}
