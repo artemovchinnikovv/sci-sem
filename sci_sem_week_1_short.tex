@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+\usepackage{amsmath}
+\DeclareMathOperator{\Tr}{Tr}
+
+\title{Initial overview of the L-unification}
+\author{Artem Ovchinnikov}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Non-sufficient self-consistency of the underlying version of quantum field theory. \\
+Incapability of describing the gravitational sector at quantum level. \\
+The standard model is too complicated. $\xrightarrow{}$ \\
+One can think that the particles of the standard model are made from a smaller number of simpler components – technicolor models. \\
+The particles of the standard model are fragments of some bigger, more symmetric and universal entities – unification models. $\xrightarrow{}$ \\
+The basic idea of all unification models is to enhance the symmetry, embedding the non-simple gauge group $ G_{st} = SU (3) \times SU (2) \times U (1) $ of the standard model into a larger simple group $G$.
+
+\section{Central idea}
+The central idea of Lisi’s approach is to consider a StM minimal modification. \\
+Number of fields in the standard model is of the order of 200 -- the number of different generators. \\
+If Lie algebra is classical -- large rank $= \sqrt {200} > 14$. \\
+If Lie group is exceptional -- $E_8$ (the next smaller exceptional group $dim(E7) = 133 < 200$). \\
+
+\section{Without extra particles and fields?}
+StM fermions numbers $n_F = 96$ (degrees of freedom) and $N_F = 192$ (fields). \\
+StM bosons numbers $n_B = 30$ and $N_B = 92$. \\
+Extra particles necessary anyaway: there is simply no Lie group which could both match dimensions and the rank condition. ???
+
+\section{The main claim}
+The action of the standard model coupled to Einstein gravity, ???
+\begin{multline}
+    \int \sqrt{\text{det}\, g} \, d^4x \{ M_{\text{Pl}}^2 R(g) - \Lambda + \frac{1}{4g_3^2} \text{Tr}_{SU(3)} G_{\mu\nu} G^{\mu\nu} + \frac{1}{4g_2^2} \text{Tr}_{SU(2)} W_{\mu\nu} W^{\mu\nu} + \frac{1}{4g_1^2} V_{\mu\nu} V^{\mu\nu} + \\ + \sum_{p=1}^{n_g=3} \left( \bar{l}^{(p)}_L \hat{D} l^{(p)}_L + \bar{l}^{(p)}_R \hat{D} l^{(p)}_R + \bar{q}^{(p)}_L \hat{D} q^{(p)}_L + \bar{q}^{(p)}_R \hat{D} q^{(p)}_R \right) + \frac{1}{2} D_\mu \phi^+ D^\mu \phi + V(\phi) + 
+    \\ + \sum_{P,Q=1}^{2n_g=6} \left( M^{(PQ)}_l \bar{l}^{(P)}_R \phi l^{(Q)}_L + M^{(PQ)}_q \bar{q}^{(P)}_R \phi q^{(Q)}_L + \text{c.c.} \right) \}
+\end{multline}
+can be rewritten in a compact form as ???
+\begin{equation}
+    \int \text{Tr}_{E_8} B \wedge F + \int Q(B)
+\end{equation}
+\begin{equation}
+    F = dA + A \wedge A
+\end{equation}
+field $A(x)$, which is a linear combination of the standard-model fields, distributed over elements of the $E_8$-algebra matrix (adjoint representation of $E_8$). \\
+$Q(B)$ is a quadratic function of the auxiliary field $B$ (also an adjoint $E_8$ matrix). \\
+
+\begin{equation}
+    A = \sum_{\alpha \in G}^{56} A^\alpha(x) T_\alpha \oplus \sum_{a \in E/G}^{192} \psi^a(x) T_a,
+\end{equation}
+\begin{equation}
+    B = \sum_{\alpha \in G}^{56} B^\alpha(x) T_\alpha \oplus \sum_{a \in E/G}^{192} \chi^a(x) T_a
+\end{equation}
+\begin{equation}
+    Q(B) = \sum_{\alpha, \alpha' \in G}^{56} \left( Q_{\text{grav}}^{\alpha, \alpha'} B^\alpha \wedge B^{\alpha'} + Q_{\text{YM}}^{\alpha, \alpha'} B^\alpha \wedge *B^{\alpha'} \right)
+\end{equation}
+
+Here the sums are over 248 generators of $E_8$, which are divided into two different groups of 56 and 192, which correspond to decomposition of adjoint (the minimal possible) representation of $E_8$ into a subalgebra $G = SO(7,1) \times SO(8)$ and its representation $R = E/G$.\\ 
+The main disadvantage is, however, more serious: desired distribution of all the fields of the standard model among the generators of $E_8$ is not actually found. ??? \\
+
+\newpage
+\section{Main drawbacks}
+Introduction of new fields beyond the standard model is still unavoidable. \\
+Hierarchy and of quantum gravity are not resolved. \\
+Cosmological constant is non-vanishing in BF -version of the Palatini formalism. ???\\
+G-projector and the Hodge star, appear in the action -- not fully topological. ???\\
+Higher generations are not adequately described. \\
+
+\section{Features of L-unification}
+Right-hand copies of $W±$, $Z$ bosons and second photon – which should somehow decouple at low energies. ??? \\
+Unification group $G = SO(7, 1) \times SO(8)$ is not simple, with strong and electroweak groups belonging to different factors -– $SO(8)$ and $SO(7, 1)$ respectively, – there is no danger of proton decay. ???\\
+
+\section{From Palatini action to Einstein equations}
+In the case of arbitrary space-time dimension d Palatini action involves the curvature of SO(d) connection
+\begin{equation}
+    S_p = \epsilon_{a_1 ... a_d} \int \exp{a_1} \land ... \land \exp{a_{d-2}} \land R^{a_{d-1}a_d}
+\end{equation}
+\begin{equation}
+    ...
+\end{equation}
+\begin{equation}
+    R_\mu^a + \frac{1}{2}e_\mu^a R \sim \det(e)T_\mu^a - e^a_\mu T
+\end{equation}
+
+\newpage
+\section{Decompositions of $E_8$ algebra}
+\begin{equation}
+    E_8 = D_8 + R_{128} = D_4 + D_4 + (8 \times 8 + R_{128})
+\end{equation}
+where $R_{128}$ is spinor representation of $SO(16)$, $D_8 = SO(16)$. \\
+
+Gauge fields are distributed among the two $D_4$ factors, with gravity and two weak groups (left and right) belonging to one of them and with strong and two abelian groups belonging to another. \\
+Fermionic fields are distributed among the spinor representation $R_128$ of maximal subgroup $SO(16) \subset E8$ and the $8 \times 8$ generators of the factor $D_8/D_4 \times D_4$. The three 64-plet constituents of the fermionic sector are related by discrete triality symmetry. \\
+\end{document}
+
+The rank of the standard-model gauge group, even after gravitational sector is included, $G_{st+gr} = SU (3) \times SU (2) \times U (1) \times SO(3, 1)$ is still 6, i.e. less than the rank 8 of the minimal possible ”unification group” E8. The deficit rank 2 is placed into additional gauge group –- the right-hand copy of the Weinberg-Salam group, giving rise to the right-hand copies.
+
+Unification algebra $G = SO(7, 1) \times SO(8)$ contains gravitational $SO(3, 1) = SL(2, C)$ and Yang-Mills $G_{YM} = SU (3) × (SU (2) \times U (1)) \times 2$. \\
