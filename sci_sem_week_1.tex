@@ -1,0 +1,95 @@
+\documentclass{article}
+
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+\usepackage{amsmath}
+\DeclareMathOperator{\Tr}{Tr}
+
+\title{Basic overview of the L-unification}
+\author{Artem Ovchinnikov}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+
+\section{Motivation}
+One problem is non-sufficient self-consistency of the underlying version of quantum field theory, which describes the Yang-Mills sector as a low-energy renormalizable limit of some more fundamental theory and is totally uncapable of describing the gravitational sector at quantum level. \\
+Another problem is partly aestetical: the standard model is too complicated to be the dreamlike distinguished fundamental theory, it seems to have too many different fields, too many unrelated coupling constants, too obscure symmetry breaking pattern. \\
+
+\section{Possible solution}
+There are at least two obvious ways to try to improve the situation: one can think that the particles of the standard model are not really elementary, but are made from a smaller number of simpler components – this leads to development of composite, e.g. technicolor models,– and one can think that the particles of the standard model are only fragments of some bigger, more symmetric and universal entities – this is the idea behind unification models
+
+\section{Main idea}
+The central idea of Lisi’s approach is to consider a minimal modification – ideally just a reformulation – of the standard model, with as few additional fields as only possible. \\
+No extra essences are introduced, like superpartners, extra dimensions, branes, strings etc. \\
+The basic idea of all unification models is to enhance the symmetry, embedding the non-simple gauge group $ G_{st} = SU (3) \times SU (2) \times U (1) $ of the standard model into a larger simple group $G$, which inevitably has larger dimension and thus introduces extra particles.
+Since the number of fields in the standard model is of the order of 200, the number of different generators of ”unification algebra” should exceed this number. If Lie algebra is classical, like SU (N), SO(N ) or Sp(N ), this requires it to have a large rank = sqrt(200) > 14. If instead the group is exceptional, then the smallest group with dimension $>$ 200 is actually the largest: E8 with dim(E8) = 248 and its rank is as low as rank(E8) = 8 (dimension of the next smaller exceptional group dim(E7) = 133 $<$ 200).
+
+\section{L and G - unification}
+Furthermore, while in G-unification models, in order to minimize the number of 3 additional gauge bosons, one attempts to find a group of the lowest dimension with a given rank, in L-unification for the same purpose one tries to minimize the rank for a given dimension, which is now defined by the number of standard-model particles, predominantly fermions. \\
+
+\section{The number of known elementary particles}
+Standard model the numbers $n_F = 96$ and $N_F = 192$. \\
+This gives at least $n_B = n_S + n_V + n_G = 4 + 24 + 2 = 30$ degrees of freedom and about $N_B = N_S + N_V + N_G = 4 + 48 + 40 = 92$ fields in bosonic sector of the standard model. \\
+Extra particles, are, however, necessary in any case: because of the rank mismatch: there is simply no Lie group which could both match the strict lower limit $ dim(G) \geq n_B + n_F > n_F = 90$ and saturate the rank condition $rank(G) = rank(U (1)) + rank(SU (2)) + rank(SU (3)) + rank(SO(3, 1)) = 1 + 1 + 2 + 2 = 6$.
+
+\section{The main claim}
+The action of the standard model coupled to Einstein gravity \\
+\begin{equation}
+    \int \Tr_{E_8} B \land F + \int Q(B)
+\end{equation}
+The main disadvantage is, however, more serious: the claim of [1] is not fully justified and, most probably, is simply wrong. Desired distribution of all the fields of the standard model among the generators of E8 is not actually found. One can even argue that it can not be found, at least without some additional modifications of the claim [16]. Still, the attempt deserves attention and it is too close to being true to be simply ignored: some new piece of reality seems to be captured in this way. \\
+
+\section{Main drawbacks}
+Only unification (symmetry) issues are addressed: other serious problems – of hierarchy and of quantum
+gravity – remain to be somehow resolved. \\
+Cosmological constant is non-vanishing in BF -version of the Palatini formalism. Of course, this is only a classical-level statement, while cosmological-constant problem is essentially quantum – and its resolution is far beyond the scope of L-unification. \\
+G-projector and the Hodge star, which explicitly depends on det(e), appear in the action, what makes it not fully topological as is ideally required for a full unification with gravity. \\
+Higher generations are not adequately described. Neither universality of gravitational interaction nor the proper chirality properties are fully established in the fermionic sector.??? \\
+Introduction of new fields beyond the standard model is still unavoidable. The rank of the standard-model gauge group, even after gravitational sector is included, Gst+gr = SU (3) × SU (2) × U (1) × SO(3, 1) is still 6, i.e. less than the rank 8 of the minimal possible ”unification group” E8. In [1] the deficit rank 2 is placed into additional gauge group – the right-hand copy of the Weinberg-Salam group, giving rise to the right-hand copies \\
+
+\section{Some phenomenological features of L-unification}
+Unification algebra $G = SO(7, 1) \times SO(8)$ contains gravitational $SO(3, 1) = SL(2, C)$ and Yang-Mills $G_{YM} = SU (3) × (SU (2) \times U (1)) \times 2$. \\
+This is a vector-like theory, with right-hand copies of W±, Z bosons and second photon – which should
+somehow decouple at low energies: along with other gauge bosons from G/Gst should acquire large masses.??? \\
+Instead, since unification group G = SO(7, 1) × SO(8) is not simple, with strong and electroweak groups
+belonging to different factors – SO(8) and SO(7, 1) respectively, – there is no danger of proton decay, which is a usual problem for simple-group unifications. \\
+The same non-simplicity implies that unification of coupling constants gstr and gweak does not need to
+take place in this model. \\
+Flavor-changing neutral currents ??? \\
+
+\section{From Palatini action to Einstein equations}
+In the case of arbitrary space-time dimension d Palatini action involves the curvature of SO(d) connection
+\begin{equation}
+    S_p = \epsilon_{a_1 ... a_d} \int \exp{a_1} \land ... \land \exp{a_{d-2}} \land R^{a_{d-1}a_d}
+\end{equation}
+\begin{equation}
+    ...
+\end{equation}
+\begin{equation}
+    R_\mu^a + \frac{1}{2}e_\mu^a R \sim \det(e)T_\mu^a - e^a_\mu T
+\end{equation}
+It is easy to deduce that $F = -T$ and therefore previous equation is actually equivalent to the proper Einstein equation
+
+\section{$E_8$ and its subalgebras}
+\begin{equation}
+    ...
+\end{equation}
+
+\section{Decompositions of $E_8$ algebra}
+\begin{equation}
+    E_8 = SO(16) + R_{128}
+\end{equation}
+where $R_{128}$ is spinor representation of $SO(16)$.
+
+\end{document}
